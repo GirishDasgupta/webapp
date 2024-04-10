@@ -56,7 +56,7 @@ def logout_user():
 # Data loading functions
 @st.cache_data(hash_funcs={sqlite3.Connection: id})
 def load_current_datasets():
-    transactions_data = pd.read_csv('400_transaction.csv').rename(columns=str.strip)
+    transactions_data = pd.read_csv('400_transactions.csv').rename(columns=str.strip)
     households_data = pd.read_csv('400_households.csv').rename(columns=str.strip)
     products_data = pd.read_csv('400_products.csv').rename(columns=str.strip)
     return transactions_data, households_data, products_data
